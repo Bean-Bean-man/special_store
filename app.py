@@ -37,23 +37,23 @@ def getSpecificBookstore(items, county):
     return specificBookstoreList
 
 def getBookstoreInfo(items):
-	expanderList = []
+    expanderList = []
     for item in items:
         expander = st.expander(item['name'])
         expander.image(item['representImage'])
         expander.metric('hitRate', item['hitRate'])
         expander.subheader('Introduction')
         # 用 expander.write 呈現書店的 Introduction
-        expander.write(items['intro'])
+        expander.write(item['intro'])
         expander.subheader('Address')
         # 用 expander.write 呈現書店的 Address
-        expander.write(items['address'])
+        expander.write(item['address'])
         expander.subheader('Open Time')
         # 用 expander.write 呈現書店的 Open Time
-        expander.write(items['openTime'])
-	    expander.subheader('Email')
+        expander.write(item['openTime'])
+        expander.subheader('Email')
         # 用 expander.write 呈現書店的 Email
-        expander.write(items['email'])
+        expander.write(item['email'])
         expanderList.append(expander)
         # 將該 expander 放到 expanderList 中
     return expanderList
