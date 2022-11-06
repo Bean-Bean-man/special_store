@@ -71,6 +71,8 @@ def app():
     num = len(specificBookstore)
 	# 用 st.write 將目標書店的總數量計算出來，格式：總共有3項結果
     st.write(f'總共有{num}項結果')
+    # 呼叫 getBookstoreInfo 並將回傳值賦值給變數 bookstoreInfo
+    bookstoreInfo=getBookstoreInfo(specificBookstore)
 if __name__ == '__main__':
     app()
 
